@@ -1,4 +1,5 @@
 # HTML Notes
+<p>HTML is an incredibly important part of the web. If you use the right HTML element for the right job, you start from a place of great strength. Making your project understandable to voice interfaces, search engines, social media. Using the power that's built right into the browser for a variety of devices and users. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" alt="Link to the MDN Website" target="_blank">MDN</a></p>
 
 ## 1. Document Structure
 
@@ -9,6 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="location" rel="relation">
     <title>My HTML Notes</title>
 </head>
 <body>
@@ -108,13 +110,70 @@
 ```html
 <form action="submit.php" method="POST">
     <label for="name">Name:</label>
-    <input type="text" id="name" name="name" placeholder="hint inside input" disabled readonly maxlength ="10" required>
+    <input type="text" id="name" name="name" placeholder="hint inside input" disabled readonly maxlength="10" required>
     
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" required>
     
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" minlength="6" required>
+    
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+    
+    <label for="url">Website:</label>
+    <input type="url" id="url" name="url">
+    
+    <label for="number">Number:</label>
+    <input type="number" id="number" name="number" min="1" max="100">
+    
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date">
+    
+    <label for="time">Time:</label>
+    <input type="time" id="time" name="time">
+    
+    <label for="datetime">Datetime:</label>
+    <input type="datetime-local" id="datetime" name="datetime">
+    
+    <label for="color">Color:</label>
+    <input type="color" id="color" name="color">
+    
+    <label for="range">Range:</label>
+    <input type="range" id="range" name="range" min="0" max="100">
+    
+    <label for="file">Upload File:</label>
+    <input type="file" id="file" name="file">
+    
     <label for="message">Message:</label>
     <textarea id="message" name="message"></textarea>
+    
+    <fieldset>
+        <legend>Gender:</legend>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Hobbies:</legend>
+        <input type="checkbox" id="reading" name="hobby" value="reading">
+        <label for="reading">Reading</label>
+        <input type="checkbox" id="sports" name="hobby" value="sports">
+        <label for="sports">Sports</label>
+        <input type="checkbox" id="music" name="hobby" value="music">
+        <label for="music">Music</label>
+    </fieldset>
+    
+    <label for="cars">Choose a car:</label>
+    <select id="cars" name="cars">
+        <option value="volvo">Volvo</option>
+        <option value="bmw">BMW</option>
+        <option value="audi">Audi</option>
+    </select>
     
     <button type="submit">Submit</button>
 </form>
