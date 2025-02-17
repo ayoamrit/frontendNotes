@@ -17,13 +17,24 @@
 </html>
 ```
 
-## 2. Headings and Paragraphs
+## 2. Headings, Paragraphs & Text
 
 ```html
 <h1>Main Heading</h1>
 <h2>Subheading</h2>
 <h3>Smaller Heading</h3>
 <p>This is a paragraph with <strong>bold</strong> and <i>italic</i> text.</p>
+<u>Underlined Text</u>
+<small>Small text</small>
+<sup>Superscript</sup>
+<sub>Subscript</sub>
+<pre>Display text as-is, preserving spaces and line breaks</pre>
+<code>Represents inline code snippets</code>
+<blockquote>For long quotations </blockquote>
+<q>Inline short quotes</q>
+<cite>Citation for a source</cite>
+<abbr>Abbreviations (show full form on hover)</abbr>
+<dfn>Definition term</dfn>
 ```
 
 ## 3. Lists
@@ -48,20 +59,20 @@
 
 ## 4. Links and Anchors
 ```html
-<a href="https://www.example.com">Visit Example</a>
-<a href="#section2">Jump to Section 2</a>
+<a href="https://www.example.com" alt="Example" target="_blank">Visit Example</a>
+<a href="#section2" rel="relationship between pages">Jump to Section 2</a>
 ```
 
 ## 5. Media Elements
 
 ### Images
 ```html
-<img src="image.jpg" alt="A descriptive text about the image">
+<img src="image.jpg" alt="A descriptive text about the image" width="100" height="100">
 ```
 
 ### Audio
 ```html
-<audio controls>
+<audio controls autoplay loop muted>
     <source src="audio.mp3" type="audio/mpeg">
     Your browser does not support the audio tag.
 </audio>
@@ -69,8 +80,9 @@
 
 ### Video
 ```html
-<video controls width="600">
+<video controls width="600" autoplay loop muted>
     <source src="video.mp4" type="video/mp4">
+    <track src="caption.vtt" kind="captions" label="english" srclang="en" default>
     Your browser does not support the video tag.
 </video>
 ```
@@ -96,7 +108,7 @@
 ```html
 <form action="submit.php" method="POST">
     <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
+    <input type="text" id="name" name="name" placeholder="hint inside input" disabled readonly maxlength ="10" required>
     
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" required>
