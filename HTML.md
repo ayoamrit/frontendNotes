@@ -23,7 +23,7 @@
 <h1>Main Heading</h1>
 <h2>Subheading</h2>
 <h3>Smaller Heading</h3>
-<p>This is a paragraph with <strong>bold</strong> and <em>italic</em> text.</p>
+<p>This is a paragraph with <strong>bold</strong> and <i>italic</i> text.</p>
 ```
 
 ## 3. Lists
@@ -130,23 +130,77 @@
 </table>
 ```
 
-## 8. Semantic Elements
+## 8. Semantic and Structural Elements
+
+### When to Use Different Structural Elements
+
+#### `<div>`
+- Used as a generic container for grouping elements.
+- Commonly used for styling purposes.
+
+```html
+<div class="container">
+    <h2>Section Title</h2>
+    <p>This is some content inside a div.</p>
+</div>
+```
+
+#### `<section>`
+- Used to group related content together.
+- Ideal for dividing different sections of a webpage.
+
+```html
+<section>
+    <h2>About Us</h2>
+    <p>Information about the company.</p>
+</section>
+```
+
+#### `<article>`
+- Represents a self-contained piece of content.
+- Useful for blog posts, news articles, or standalone content.
+
+```html
+<article>
+    <h2>Blog Post Title</h2>
+    <p>This is a standalone blog post.</p>
+</article>
+```
+
+#### `<aside>`
+- Used for content related to the main content but not part of it.
+- Commonly used for sidebars, advertisements, or related links.
+
+```html
+<aside>
+    <h3>Related Articles</h3>
+    <ul>
+        <li><a href="#">Article 1</a></li>
+        <li><a href="#">Article 2</a></li>
+    </ul>
+</aside>
+```
+
+#### `<header>`
+- Used to define introductory content or navigation links.
+- Can be used inside `<article>` and `<section>` as well.
+
 ```html
 <header>
     <h1>Website Header</h1>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
 </header>
-<nav>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-    </ul>
-</nav>
-<main>
-    <article>
-        <h2>Article Title</h2>
-        <p>This is a sample article.</p>
-    </article>
-</main>
+```
+
+#### `<footer>`
+- Defines footer content, such as copyright information or additional links.
+
+```html
 <footer>
     <p>&copy; 2025 My Website</p>
 </footer>
@@ -163,4 +217,4 @@
 <iframe src="https://www.example.com" width="600" height="400"></iframe>
 ```
 
-This markdown file can be used as a reference while working with HTML.
+This markdown file can be used as a reference while working with HTML. Let me know if you want any modifications or additional sections!
