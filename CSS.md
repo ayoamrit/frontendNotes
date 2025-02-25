@@ -79,6 +79,36 @@ Each element in CSS has a box model consisting of:
 }
 ```
 
+## CSS Units and Sizes
+CSS provides different units for defining sizes:
+- **Absolute Units** (Fixed sizes)
+  - `px` (Pixels): Fixed unit, does not scale with user settings.
+  - `pt` (Points): Typically used for print styles.
+  - `cm`, `mm`, `in` (Centimeters, Millimeters, Inches): Rarely used in web design.
+
+- **Relative Units** (Scalable sizes)
+  - `em`: Relative to the font-size of the parent element.
+  - `rem`: Relative to the font-size of the root element (`html`).
+  - `%`: Relative to the parent element's size.
+  - `vh` / `vw`: Viewport height and width, relative to the screen size.
+  - `vmin` / `vmax`: Relative to the smaller or larger viewport dimension.
+
+Example usage:
+```css
+body {
+  font-size: 16px;
+}
+p {
+  font-size: 1.5em; /* 1.5 times the parent's font size */
+}
+h1 {
+  font-size: 2rem; /* 2 times the root font size */
+}
+.container {
+  width: 80vw; /* 80% of the viewport width */
+}
+```
+
 ## Flexbox
 Used to create responsive layouts efficiently.
 ```css
@@ -128,47 +158,7 @@ CSS Grid is another layout system for creating complex designs.
 }
 ```
 
-## Advanced Concepts
-### CSS Variables
-Define reusable values.
-```css
-:root {
-  --primary-color: blue;
-}
-.button {
-  background-color: var(--primary-color);
-}
-```
-
-### CSS Grid Advanced
-Using named grid areas.
-```css
-.grid {
-  display: grid;
-  grid-template-areas: "header header"
-                       "sidebar content";
-}
-.header { grid-area: header; }
-.sidebar { grid-area: sidebar; }
-.content { grid-area: content; }
-```
-
-### Clipping and Masking
-Control visibility of elements.
-```css
-.clip {
-  clip-path: circle(50% at center);
-}
-```
-
-### CSS Transforms
-Apply transformations to elements.
-```css
-.box {
-  transform: rotate(45deg);
-}
-```
-
 ## Learn More
 For more details, visit the [MDN Web Docs on CSS](https://developer.mozilla.org/en-US/docs/Web/CSS).
 
+---
